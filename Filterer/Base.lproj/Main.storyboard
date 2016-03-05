@@ -19,7 +19,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.10000000000000001" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="e6u-5X-Qpc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="aND-Em-4Dd">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="aND-Em-4Dd" customClass="PhotoView" customModule="Filterer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
                                         <color key="backgroundColor" white="0.050000000000000003" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
@@ -34,7 +34,6 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="rV4-LR-m9i"/>
-                                    <outletCollection property="gestureRecognizers" destination="niw-nD-R1k" appends="YES" id="a0E-fP-HTN"/>
                                 </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNF-wb-wwY">
@@ -114,7 +113,6 @@
                         <outlet property="imageView" destination="aND-Em-4Dd" id="vbi-rB-DhQ"/>
                         <outlet property="scrollView" destination="e6u-5X-Qpc" id="nUR-jv-fc6"/>
                         <outlet property="secondaryMenu" destination="ePS-oG-ZHP" id="Be7-JW-Iwe"/>
-                        <outlet property="zoomTapGestureRecognizer" destination="niw-nD-R1k" id="yWc-2q-Vk1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -156,11 +154,6 @@
                         <constraint firstItem="n3M-NR-6VP" firstAttribute="leading" secondItem="ePS-oG-ZHP" secondAttribute="leading" id="uEa-cd-VyS"/>
                     </constraints>
                 </view>
-                <tapGestureRecognizer id="niw-nD-R1k">
-                    <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="Otg-sz-JWL"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="388" y="329"/>
         </scene>

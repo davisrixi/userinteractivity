@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         secondaryMenu.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         secondaryMenu.translatesAutoresizingMaskIntoConstraints = false
         
-        zoomTapGestureRecognizer.numberOfTapsRequired = 2
+        //zoomTapGestureRecognizer.numberOfTapsRequired = 2
     }
 
     // MARK: Share
